@@ -1,7 +1,6 @@
-import type { IArchiveService, ArchiveMeta } from "@/application/ports/repositories";
-import { buildArchiveFilename } from "@/domain/archive";
+import type { IArchiveService, ArchiveMeta, ArchiveRecord, SpendingIncome } from "@vault-track/shared";
+import { buildArchiveFilename } from "@vault-track/shared";
 import { downloadJsonFile } from "@/infrastructure/archive/browser-file-export";
-import type { ArchiveRecord, SpendingIncome } from "@/domain/types";
 import { archivesTable } from "@/infrastructure/storage/dexie-db";
 
 export class IndexedDbArchiveService implements IArchiveService {

@@ -1,7 +1,5 @@
-import type { SavingTransactionPersistenceInput } from "@/application/contracts/dtos";
-import type { ISavingRepository } from "@/application/ports/repositories";
-import { applySavingTransaction } from "@/domain/saving";
-import { ACTIVE_DOCUMENT_KEY } from "@/domain/types";
+import type { SavingTransactionPersistenceInput, ISavingRepository } from "@vault-track/shared";
+import { ACTIVE_DOCUMENT_KEY, applySavingTransaction } from "@vault-track/shared";
 import { touchLastModified } from "@/infrastructure/seed/initial-data";
 import { notifyDataChanged } from "@/infrastructure/sync/broadcast-sync";
 import { db, metaTable, savingTable } from "@/infrastructure/storage/dexie-db";

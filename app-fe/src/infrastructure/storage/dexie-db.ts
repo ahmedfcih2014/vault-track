@@ -5,7 +5,7 @@ import type {
   ArchiveRecord,
   Saving,
   SpendingIncome,
-} from "@/domain/types";
+} from "@vault-track/shared";
 
 export const SCHEMA_VERSION = 1;
 

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import type { ReactNode } from "react";
 import { DexieAppBootstrap } from "@/infrastructure/bootstrap/dexie-app-bootstrap";
 import { subscribeToDataChanges } from "@/infrastructure/sync/broadcast-sync";
-import { DOMAIN_ERROR_CODES, DomainError } from "@/domain/errors";
+import { DOMAIN_ERROR_CODES, DomainError } from "@vault-track/shared";
 import { CorruptDataRecovery } from "@/presentation/components/CorruptDataRecovery";
 import { useAppStore } from "@/presentation/hooks/use-app-store";
 

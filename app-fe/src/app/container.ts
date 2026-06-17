@@ -1,6 +1,8 @@
-import { ApplySavingTransactionUseCase } from "@/application/use-cases/apply-saving-transaction";
-import { ApplySpendingIncomeTransactionUseCase } from "@/application/use-cases/apply-spending-income-transaction";
-import { ResetSpendingIncomePeriodUseCase } from "@/application/use-cases/reset-spending-income-period";
+import {
+  ApplySavingTransactionUseCase,
+  ApplySpendingIncomeTransactionUseCase,
+  ResetSpendingIncomePeriodUseCase,
+} from "@vault-track/shared";
 import { IndexedDbArchiveService } from "@/infrastructure/archive/indexed-db-archive-service";
 import { DexieSavingRepository } from "@/infrastructure/repositories/dexie-saving-repository";
 import { DexieSpendingIncomeRepository } from "@/infrastructure/repositories/dexie-spending-income-repository";

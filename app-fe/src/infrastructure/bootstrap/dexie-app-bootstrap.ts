@@ -1,9 +1,11 @@
-import { nowIso } from "@/domain/date";
-import { buildArchiveFilename } from "@/domain/archive";
-import type { IAppBootstrap } from "@/application/ports/repositories";
-import { validatePersistedSnapshot } from "@/application/validators/validate-persisted-snapshot";
+import type { IAppBootstrap, ArchiveRecord } from "@vault-track/shared";
+import {
+  ACTIVE_DOCUMENT_KEY,
+  buildArchiveFilename,
+  nowIso,
+  validatePersistedSnapshot,
+} from "@vault-track/shared";
 import { downloadJsonFile } from "@/infrastructure/archive/browser-file-export";
-import { ACTIVE_DOCUMENT_KEY, type ArchiveRecord } from "@/domain/types";
 import {
   isDatabaseSeeded,
   seedInitialData,

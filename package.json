@@ -1,0 +1,23 @@
+{
+  "name": "vault-track",
+  "private": true,
+  "workspaces": [
+    "app-fe",
+    "app-rn",
+    "packages/shared"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/link-expo-router.mjs",
+    "dev:fe": "npm run dev -w app-fe",
+    "build:fe": "npm run build -w app-fe",
+    "start:rn": "npm run start -w app-rn",
+    "test": "npm run test:smoke -w @vault-track/shared",
+    "test:unit": "npm run test -w @vault-track/shared",
+    "test:fe": "npm run test -w app-fe",
+    "test:e2e": "npm run test:e2e -w app-fe",
+    "verify:shared": "node scripts/verify-shared.mjs"
+  }
+}

@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
-import type { SavingTransactionInput } from "@/application/contracts/dtos";
+import type { SavingTransactionInput } from "@vault-track/shared";
+import { DomainError } from "@vault-track/shared";
 import { appContainer } from "@/app/container";
-import { DomainError } from "@/domain/errors";
 import { useAppStore } from "@/presentation/hooks/use-app-store";
 
 export function useSaving() {

@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react";
-import type { SpendingIncomeTransactionInput } from "@/application/contracts/dtos";
+import type { SpendingIncomeTransactionInput } from "@vault-track/shared";
+import { DomainError, SPENDING_OPERATION_LABELS } from "@vault-track/shared";
 import { appContainer } from "@/app/container";
-import { SPENDING_OPERATION_LABELS } from "@/domain/spending-income";
-import { DomainError } from "@/domain/errors";
 import { useAppStore } from "@/presentation/hooks/use-app-store";
 
 export function useSpendingIncome() {

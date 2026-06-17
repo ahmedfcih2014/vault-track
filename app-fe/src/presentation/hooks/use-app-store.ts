@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Saving, SpendingIncome } from "@/domain/types";
+import type { Saving, SpendingIncome } from "@vault-track/shared";
 
 interface AppState {
   isBootstrapped: boolean;

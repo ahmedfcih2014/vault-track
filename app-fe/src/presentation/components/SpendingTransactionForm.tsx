@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { SpendingIncomeTransactionInput } from "@/application/contracts/dtos";
+import type { SpendingIncomeTransactionInput } from "@vault-track/shared";
 import {
+  SPENDING_OPERATION_LABELS,
   spendingIncomeTransactionFormSchema,
+  type OperationType,
   type SpendingIncomeTransactionFormValues,
-} from "@/application/validators/schemas";
-import { SPENDING_OPERATION_LABELS } from "@/domain/spending-income";
-import type { OperationType } from "@/domain/types";
+} from "@vault-track/shared";
 import { Button } from "@/presentation/components/ui/button";
 import { Input } from "@/presentation/components/ui/input";
 import { Label } from "@/presentation/components/ui/label";

@@ -1,7 +1,9 @@
-import { nowIso } from "@/domain/date";
-import { createEmptySaving } from "@/domain/saving";
-import { createFreshSpendingIncome } from "@/domain/spending-income";
-import { ACTIVE_DOCUMENT_KEY } from "@/domain/types";
+import {
+  ACTIVE_DOCUMENT_KEY,
+  createEmptySaving,
+  createFreshSpendingIncome,
+  nowIso,
+} from "@vault-track/shared";
 import {
   db,
   metaTable,

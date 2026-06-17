@@ -1,8 +1,12 @@
-import { formatDisplayDate } from "@/domain/date";
-import { formatCurrency, formatSignedEgp } from "@/domain/money";
-import { ACCOUNT_LABELS } from "@/domain/saving";
-import { SPENDING_OPERATION_LABELS } from "@/domain/spending-income";
-import type { SavingTransaction, SpendingIncomeTransaction } from "@/domain/types";
+import {
+  ACCOUNT_LABELS,
+  formatCurrency,
+  formatDisplayDate,
+  formatSignedEgp,
+  SPENDING_OPERATION_LABELS,
+  type SavingTransaction,
+  type SpendingIncomeTransaction,
+} from "@vault-track/shared";
 import { Card } from "@/presentation/components/ui/card";
 
 type TransactionItem = SavingTransaction | SpendingIncomeTransaction;

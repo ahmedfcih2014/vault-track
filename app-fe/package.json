@@ -1,5 +1,5 @@
 {
-  "name": "vault-track",
+  "name": "app-fe",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@vault-track/shared": "*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "decimal.js": "^10.6.0",

@@ -18,7 +18,9 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@vault-track/shared": ["../packages/shared/src/index.ts"],
+      "@vault-track/shared/*": ["../packages/shared/src/*"]
     }
   },
   "include": ["src"]

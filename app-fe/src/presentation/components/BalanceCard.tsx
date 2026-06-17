@@ -1,6 +1,4 @@
-import { formatCurrency } from "@/domain/money";
-import type { AccountType } from "@/domain/types";
-import { ACCOUNT_LABELS } from "@/domain/saving";
+import { ACCOUNT_LABELS, formatCurrency, type AccountType } from "@vault-track/shared";
 import { Card, CardTitle, CardValue } from "@/presentation/components/ui/card";
 import { cn } from "@/presentation/lib/utils";
 

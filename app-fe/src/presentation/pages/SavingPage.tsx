@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import type { AccountType } from "@/domain/types";
+import type { AccountType } from "@vault-track/shared";
 import { BottomSheet } from "@/presentation/components/BottomSheet";
 import { BalanceCard } from "@/presentation/components/BalanceCard";
 import { SavingTransactionForm } from "@/presentation/components/SavingTransactionForm";

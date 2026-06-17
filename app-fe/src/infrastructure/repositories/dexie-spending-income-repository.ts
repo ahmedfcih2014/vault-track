@@ -1,8 +1,14 @@
-import type { SpendingIncomeTransactionPersistenceInput } from "@/application/contracts/dtos";
-import type { ArchiveMeta, ISpendingIncomeRepository } from "@/application/ports/repositories";
+import type {
+  ArchiveMeta,
+  ISpendingIncomeRepository,
+  SpendingIncomeTransactionPersistenceInput,
+  SpendingIncome,
+} from "@vault-track/shared";
+import {
+  ACTIVE_DOCUMENT_KEY,
+  applySpendingIncomeTransaction,
+} from "@vault-track/shared";
 import { toArchiveRecord } from "@/infrastructure/archive/indexed-db-archive-service";
-import { applySpendingIncomeTransaction } from "@/domain/spending-income";
-import { ACTIVE_DOCUMENT_KEY, type SpendingIncome } from "@/domain/types";
 import { touchLastModified } from "@/infrastructure/seed/initial-data";
 import { notifyDataChanged } from "@/infrastructure/sync/broadcast-sync";
 import {

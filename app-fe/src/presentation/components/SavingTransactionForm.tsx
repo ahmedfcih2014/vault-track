@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import type { SavingTransactionInput } from "@/application/contracts/dtos";
+import type { SavingTransactionInput } from "@vault-track/shared";
 import {
+  ACCOUNT_LABELS,
   savingTransactionFormSchema,
+  type AccountType,
+  type OperationType,
   type SavingTransactionFormValues,
-} from "@/application/validators/schemas";
-import { ACCOUNT_LABELS } from "@/domain/saving";
-import type { AccountType, OperationType } from "@/domain/types";
+} from "@vault-track/shared";
 import { Button } from "@/presentation/components/ui/button";
 import { Input } from "@/presentation/components/ui/input";
 import { Label } from "@/presentation/components/ui/label";

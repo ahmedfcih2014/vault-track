@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { appContainer } from "@/app/container";
-import type { ArchiveMeta } from "@/application/ports/repositories";
-import type { SpendingIncome } from "@/domain/types";
+import type { ArchiveMeta, SpendingIncome } from "@vault-track/shared";
 
 export function useArchives() {
   const [archives, setArchives] = useState<ArchiveMeta[]>([]);
