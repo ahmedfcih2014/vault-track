@@ -43,6 +43,63 @@ Then press `a` for Android, `i` for iOS, or scan the QR code with Expo Go.
 npx expo start --web --clear
 ```
 
+## Build Android (EAS)
+
+[EAS Build](https://docs.expo.dev/build/introduction/) compiles the app in the cloud. Install from the repo root first (`npm install`).
+
+### One-time setup
+
+```bash
+npm install -g eas-cli
+eas login
+cd app-rn
+```
+
+`eas.json` and the Android package (`com.ahmedhesham.vaulttrack`) are already configured in this project.
+
+### Build profiles
+
+| Profile       | Use case                                      |
+| ------------- | --------------------------------------------- |
+| `preview`     | Install on your phone (internal distribution) |
+| `production`  | Play Store release (AAB)                      |
+| `development` | Dev client with live reload                   |
+
+### Build and install
+
+```bash
+cd app-rn
+
+# Internal APK/AAB for sideloading (recommended for personal use)
+eas build -p android --profile preview
+
+# Play Store build
+eas build -p android --profile production
+```
+
+When the build finishes, download the artifact from the link in the terminal or from [expo.dev](https://expo.dev):
+
+```bash
+eas build:download
+```
+
+Copy the APK to your phone and install it (enable “Install unknown apps” for your file manager if prompted).
+
+### APK vs AAB
+
+By default, EAS may produce an **AAB** (Android App Bundle). For a direct **APK** sideload, add this to the `preview` profile in `eas.json`:
+
+```json
+"preview": {
+  "distribution": "internal",
+  "android": {
+    "buildType": "apk"
+  }
+}
+```
+
+Then run `eas build -p android --profile preview` again.
+
 ## Architecture
 
 ```
